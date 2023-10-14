@@ -4,6 +4,12 @@ dependencies:
   '@trickle/lec3d':
     specifier: ^0.0.3
     version: 0.0.3
+  '@tweenjs/tween.js':
+    specifier: '18'
+    version: 18.6.4
+  typeit:
+    specifier: ^8.7.1
+    version: 8.7.1
 
 devDependencies:
   '@sveltejs/vite-plugin-svelte':
@@ -296,6 +302,10 @@ packages:
       three: 0.157.0
     dev: false
 
+  /@tweenjs/tween.js@18.6.4:
+    resolution: {integrity: sha512-lB9lMjuqjtuJrx7/kOkqQBtllspPIN+96OvTCeJ2j5FEzinoAXTdAMFnDAQT1KVPRlnYfBrqxtqP66vDM40xxQ==}
+    dev: false
+
   /@types/estree@1.0.2:
     resolution: {integrity: sha512-VeiPZ9MMwXjO32/Xu7+OwflfmeoRwkE/qzndw42gGtgJwZopBnzy2gD//NN1+go1mADzkDcqf/KnFRSjTJ8xJA==}
     dev: true
@@ -502,6 +512,11 @@ packages:
 
   /three@0.157.0:
     resolution: {integrity: sha512-CeAwQrf4x3z0/e+MC4F+nXLW5t0gh3pw+L6CCBqpHvOq3bGYIgRYub7Pv0j/9wR+d++OiEglyZzWyuSYbwWGOA==}
+    dev: false
+
+  /typeit@8.7.1:
+    resolution: {integrity: sha512-Bx/O4NMz10NWh9FWYtVwV4XwGHF9UDJfpCZPJRtw2/oUcahFAStU8J0t19aroPfTV6s1UlS5ICoqilOqmEnh2Q==}
+    requiresBuild: true
     dev: false
 
   /vite@4.4.5:
