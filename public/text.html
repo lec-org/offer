@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: #bfb;
+        text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 15px #00a67c;
+        filter: drop-shadow(0 0 2px #00a67c);
+      }
+
+      button {
+        background-color: #00a67c;
+        color: #bfb;
+        text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 15px #00a67c;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text"></div>
+  </body>
+  <script src="https://unpkg.com/typeit@8.6.0/dist/index.umd.js"></script>
+  <script>
+    let hash = window.parent?.location?.hash?.split("#")?.[1];
+    // let hash = location?.hash?.split("#")?.[1];
+    // 基本加密方式
+    // const encode = (name) => {
+    //   hash = [...encodeURI(name)].map((c) => c.charCodeAt(0) ^ "lec").join("&");
+    //   return hash;
+    // };
+
+    const handleClick = () => {
+      alert(1);
+    };
+
+    const decode = () => {
+      const arr = hash?.split("&")?.map((c) => +c ^ "lec");
+      const text = String.fromCharCode(...arr);
+      hash = decodeURI(text);
+      return hash;
+    };
+    const res = decode();
+
+    if (hash) {
+      console.log(1);
+      new TypeIt("#text", {
+        speed: 50,
+        startDelay: 900,
+      })
+        .type(
+          `<li>
+          <span>1822</span>
+          <span>Babbage 设计出由蒸汽驱动的差分机，计算机的雏形出现</span>
+        </li>
+
+        <li>
+          <span>1843</span>
+          <span>
+            Ada 成为世界上第一位程序员，拟定了"算法"的概念，创建了第一份程序设计流程图
+          </span>
+        </li>
+
+        <li>
+          <span>1936</span>
+          <span>Turing 完成希尔伯特挑战，设计出图灵机</span>
+        </li>
+
+        <li>
+          <span>1945</span>
+          <span>Neumann 公布 EDVAC 的设计逻辑，冯·诺依曼结构诞生</span>
+        </li>
+
+        <li>
+          <span>1945</span>
+          <span>Dijkstra 开始从事编程工作，计算机即将成为一门科学</span>
+        </li>
+
+        <li>
+          <span>1965</span>
+          <span>
+            Hamilton
+            参与阿波罗计划，用软件保障了人类的第一次登月，推动软件开发成为工程
+          </span>
+        </li>
+
+        <li>
+          <span>1969</span>
+          <span>人类在尝试在互联网上发出第一条消息: LOGIN</span>
+        </li>
+
+        <li>
+          <span>1985</span>
+          <span>Stallman 发表《GNU宣言》，自由软件基金会成立</span>
+        </li>
+
+        <li>
+          <span>1987</span>
+          <span>
+            王运丰发送中国第一封电子邮件《越过长城，走向世界》，标志着中国进入互联网时代
+          </span>
+        </li>
+
+        <li>
+          <span> 1990 </span>
+          <span>Tim 发明浏览器和 HTML，并完成了第一个 Web 服务器</span>
+        </li>
+
+        <li>
+          <span>1991</span>
+          <span>Linus 发布 Linux 内核，深远地影响了互联网的发展</span>
+        </li>
+
+        <li>
+          <span>2008</span>
+          <span>Satoshi 发明比特币，新的交易体系产生</span>
+        </li>
+
+        <li>
+          <span>2019</span>
+          <span>OpenAI 发布 GPT-2，大模型时代的前夜到来</span>
+        </li>
+
+        `,
+          { delay: 100 }
+        )
+        .type(
+          `
+        <li>
+          <span>2023</span>
+          <span>${res}加入乐程团队，开启全新时代</span>
+        </li>
+      `
+        )
+        .type(
+          `<div style="text-align:center;">
+            <span>未来...</span>
+            <span>已来...</span>
+          </div>`,
+          { delay: 800 }
+        )
+        .delete(9999, { instant: true })
+        .type(`<h1 style="text-align:center">乐程软件工作室<h1>`)
+        .type(`<div>欢迎加入，${res}同学！</div>`)
+        .type(
+          `<div>自 2010 年 6 月创立至 2023 年 10 月，我们始终坚定地致力于软件开发和作品开发，成为了学生科研领域中的一支优秀力量。在这漫长的发展历程中，我们不断追求技术的卓越和创新的突破，为在校师生提供了实践锻炼和学术交流的宝贵平台。</div>`
+        )
+        .type(
+          `<div>我们秉承个性发展的原则，鼓励每个人从自己的兴趣出发，在自己适合的领域做出一番成果——兴趣是最好的老师，快乐是最强的动力。</div>`
+        )
+        .type(
+          `
+          <div>我们希望你坚持学术创新和项目实践的双轮驱动，不断追求卓越和创新，使乐程继续保持积极向上、充满挑战与成长的氛围，与此同时也希望你注重和其他同学相互学习、相互促进，共同进步。</div>
+        `
+        )
+        .type(
+          `
+        <div style="text-align:center; margin-top:10px;">
+            Hello LEC 2023
+        </div>
+        `,
+          { delay: 800 }
+        )
+        .delete(9999, { instant: true })
+        .go();
+    } else {
+      new TypeIt("#text", {
+        speed: 50,
+        startDelay: 900,
+      })
+        .type(`ERROR: INVADED BY SOMEONE UNKNOWN!`, { delay: 100 })
+        .go();
+    }
+  </script>
+</html>
