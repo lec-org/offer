@@ -3,7 +3,6 @@
   import TWEEN from '@tweenjs/tween.js';
   import { onMount } from 'svelte';
 
-
   let element, textContent;
   const computerName = 'mac pro'
   // let computerModelName;
@@ -12,10 +11,10 @@
       // axesHelperConfigs: {
       //   length: 1000
       // },
-      rendererConfigs: {
-        backgroundColor: 0xff0000
-      },
+      
   })
+
+
   const { mountTo: mountCss3dTo, createCss3dObject } = lec3d.initCss3d({scene, camera})
   const {mountTo: mountCss2dTo, createCss2dObject} = lec3d.initCss2d({scene, camera})
   renderer.setClearColor(0x000000, 1)
@@ -165,15 +164,16 @@
     const target = getClickEventTargets(e)?.[0]?.object
     let curTarget = target
     while(curTarget) {
-      if (curTarget.name === computerName) {
+      console.log(curTarget)
+      if (curTarget?.name === 'chest') {
         break
       }
       curTarget = curTarget.parent
     }
     // 点到了指定的电脑模型
     if(curTarget) {
-      console.log('target', curTarget)
-    }
+      curTarget.rotation.y += 0.1
+    } 
   }
 
 
@@ -183,7 +183,7 @@
     // 动态控制这个内容
     textContent = document.createElement('iframe')
     textContent.style.border = 'none'
-    textContent.width = '570'
+    textContent.width = '590'
     textContent.height = '404'
     textContent.scrolling = 'no'
 
@@ -205,6 +205,8 @@
 
     window.addEventListener('click', handleClick)
     generateText()
+    // addControls()
+
     loadModels(scene)
     mountTo(element)
     setTimeout(() => {
