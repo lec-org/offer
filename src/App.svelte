@@ -183,13 +183,13 @@
     // 动态控制这个内容
     textContent = document.createElement('iframe')
     textContent.style.border = 'none'
-    textContent.width = '590'
+    textContent.width = '540'
     textContent.height = '404'
     textContent.scrolling = 'no'
 
 
     const css2dObject = createCss2dObject({content:textContent})
-    css2dObject.position.set(-24, 60, -40)
+    css2dObject.position.set(-14, 60, -40)
     css2dObject.name = 'text'
     scene.add(css2dObject)
   }
