@@ -200,7 +200,7 @@
     updateAnimate()
     focus(()=>{
       // controls.enabled = true
-      textContent.src = '/text.html'
+      textContent.src = '/offer/text.html'
     })
 
     window.addEventListener('click', handleClick)
