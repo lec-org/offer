@@ -183,8 +183,8 @@
     // 动态控制这个内容
     textContent = document.createElement('iframe')
     textContent.style.border = 'none'
-    textContent.width = '540'
-    textContent.height = '422'
+    textContent.width = '800'
+    textContent.height = '600'
     textContent.scrolling = 'no'
 
 
