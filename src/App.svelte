@@ -143,7 +143,7 @@
         new TWEEN.Tween(camera.position).to({
             x: 0,
             y: 10,
-            z: 180,
+            z: 300,
           }, 
           
           loadingTime).onUpdate((obj)=> {
